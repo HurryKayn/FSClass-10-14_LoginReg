@@ -1,0 +1,36 @@
+﻿@using App202310_16.ModelsView;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model LoginAccountVw;
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form id="loginForm" method="post">
+            <div class=" form-floating">
+                <input asp-for="Email" class="form-control" autocomplete="username" />
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email" class="Text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Password" class="form-control" autocomplete="new-password" />
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password" class="Text-danger"></span>
+            </div>
+
+            <div class="checkbox">
+                <label asp-for="Ricordami"></label>
+                <input asp-for="Ricordami" class="form-check-input" />
+                
+                @* <span asp-validation-for="Ricordami" class="Text-danger"></span> *@
+            </div>
+
+            <button id="loginSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Conferma</button>
+        </form>
+    </div>
+
+</div>
